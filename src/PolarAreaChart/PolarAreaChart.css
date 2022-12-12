@@ -1,0 +1,51 @@
+.PolarAreaChart {
+    padding: 20px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.RangeWrapper:nth-child(2n) {
+    margin-left: 26px;
+}
+
+.RangeWrapper {
+    width: 42%;
+}
+
+.RangeValue {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #656379;
+    border-radius: 1.3px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #aaaaaa;
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background: #acabbf;
+    cursor: pointer;
+    margin-top: -8px;
+}
