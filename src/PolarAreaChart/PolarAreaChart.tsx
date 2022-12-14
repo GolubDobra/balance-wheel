@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PolarArea } from "react-chartjs-2";
 import { ChartJSOrUndefined } from "react-chartjs-2/dist/types";
 import {
@@ -22,6 +22,15 @@ export const PolarAreaChart = () => {
     new Array(NUM_OF_VALUES).fill(START_VALUE)
   );
 
+  useEffect(() => {
+    RANGE_ID.forEach((rangeValueId) => {
+      const rangeValueElm = document.getElementById(
+        `${rangeValueId}`
+      ) as HTMLInputElement;
+      rangeValueElm.value = String(START_VALUE);
+    });
+  }, [])
+
   const rangeSlide = (value: string, rangeValueId: string, index: number) => {
     const rangeValue = document.getElementById(rangeValueId);
     if (rangeValue) {
@@ -43,9 +52,7 @@ export const PolarAreaChart = () => {
       }
     }
   };
-
  
-
   return (
     <>
       <PolarArea ref={myChart} data={DATA} />
