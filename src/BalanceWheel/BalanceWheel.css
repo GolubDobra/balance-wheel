@@ -1,0 +1,7 @@
+.BalanceWheel {
+  overflow: hidden;
+}
+
+.BalanceWheel::-webkit-scrollbar {
+  width: 0;
+}

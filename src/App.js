@@ -1,11 +1,11 @@
-import { PolarAreaChart } from "./PolarAreaChart";
-import 'chart.js/auto';
+import { BalanceWheel } from "./BalanceWheel";
+import "chart.js/auto";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <PolarAreaChart />
+      <BalanceWheel />
     </div>
   );
 }
